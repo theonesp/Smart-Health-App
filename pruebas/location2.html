@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Google Maps || Powered By MapsEasy.com Maps Generator</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<style type="text/css">
+	html, body { height: 100%; padding:0px; margin:0px;}
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/override.css"/>
+<link rel="stylesheet" type="text/css" href="css/simptip-mini.css" media="screen,projection" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--- start-mmmenu-script-->
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<link type="text/css" rel="stylesheet" href="css/override.css" />
+
+		<!---End-mmmenu-script-->
+	</head>
+	<body onload="LoadGmaps()" onunload="GUnload()">
+		<!---start-wrap-->
+		<!---start-header-->
+			<div id="page">
+					<div id="header">
+						<a class="navicon" href="#menu-left"> </a>
+						<div class="logo">
+						<img src="images/logo.png" alt="" />
+						</div>
+					</div>
+					<nav id="menu-left">
+						<ul>
+							<li><a href="index.html" >Inicio</a></li>
+							<li class="active"><a href="#" class="scroll">SmartHealth Noticias</a></li>
+							<li><a href="shreader.html">SmartHealth Reader</a></li>
+							<li><a href="incubadoranews.html">Incubadora Noticias</a></li>
+							<li><a href="contact.html">Contacto</a></li>
+							<li><a href="#location" class="scroll">Localización</a></li>
+							
+						</ul>
+					</nav>
+				</div>
+		<!---End-header-->
+
+<script type="text/javascript">
+
+	///////////////////////////////////////////////////////////////////
+	// Powered By MapsEasy.com Maps Generator                        
+	// Please keep the author information as long as the maps in use.
+	// You can find the free service at: http://www.MapsEasy.com     
+	///////////////////////////////////////////////////////////////////
+	function LoadGmaps() {
+		$('nav#menu-left').mmenu();
+		var myLatlng = new google.maps.LatLng(40.4398366,-3.7189639);
+		var myOptions = {
+			zoom: 16,
+			center: myLatlng,
+			disableDefaultUI: true,
+			panControl: false,
+			zoomControl: true,
+			zoomControlOptions: {
+				style: google.maps.ZoomControlStyle.SMALL
+			},
+
+			mapTypeControl: false,
+			streetViewControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+		var map = new google.maps.Map(document.getElementById("MyGmaps"), myOptions);
+		var marker = new google.maps.Marker({
+			position: myLatlng,
+			map: map,
+			title:"Hospital Clínico San Carlos, Calle Profesor Martín Lagos, Madrid"
+		});
+		var infowindow = new google.maps.InfoWindow({
+			content: "Hospital Clínico San Carlos, Unidad de Innovación, 4ª Sur"
+			});
+			google.maps.event.addListener(marker, "click", function() {
+				infowindow.open(map, marker);
+				});
+			
+
+			
+	}
+
+</script>
+
+
+<!-- Maps DIV : you can move the code below to where you want the maps to be displayed -->
+<div id="MyGmaps" style="width:100%;height:100%;"></div>
+<!-- End of Maps DIV -->
+		<!----start-footer---->
+		<div class="footer">
+			<div class="wrap">
+				<div class="footer-grids">
+					<div class="footer-left">
+						<ul>
+							<li><a class="ftwiter" href="#"> </a></li>
+							<li><a class="fface" href="#"> </a></li>
+							<li><a class="fhtml" href="#"> </a></li>
+							<li><a class="fflick" href="#"> </a></li>
+							<div class="clear"> </div>
+						</ul>
+					</div>
+					
+					<!----move-top-path---->
+					<script type="text/javascript" src="js/move-top.js"></script>
+					<script type="text/javascript" src="js/easing.js"></script>
+					<!----move-top-path---->
+			  
+
+					</div>
+					<div class="clear"> </div>
+				</div>
+			</div>
+		</div>
+		<!----//End-footer---->
+		<!---End-wrap----->
+	</body>
+</html>

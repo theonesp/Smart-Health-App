@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": "lib"
+		},
+		{
+			"path": "bin"
+		},
+		{
+			"path": "test"
+		},
+		{
+			"path": "resources"
+		}
+	]
+}
