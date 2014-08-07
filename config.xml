@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Plugins -->
@@ -58,6 +59,8 @@
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
     <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" /> 
+=======
+>>>>>>> parent of d7474f8... Config.xml & icons added
 
 <icon src="icon.png" />
 
